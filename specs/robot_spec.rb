@@ -3,8 +3,14 @@ require_relative 'spec_helper'
 require_relative '../lib/Robot'
 
 describe Robot do
-  let(:robot1) { Robot.new("Data", true) }
-  let(:robot2) { Robot.new("Lore", false) }
+  let(:robot1) {
+    puts "Making Data Captain!"
+    Robot.new("Data", true)
+  }
+  let(:robot2) {
+    puts "Oh No Lore has been born!"
+    Robot.new("Lore", false)
+  }
   it "Robot has a name" do
     robot1.name.must_equal("Data")
     robot2.name.must_equal("Lore")
